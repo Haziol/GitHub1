@@ -2,6 +2,9 @@ function getComputerChoice() {
     return Math.floor((Math.random() * 5) + 1);
 }
 
+var Wins=0;
+var Loses=0;
+var Ties=0;
 const ROCK = 'ROCK';
 const SCISSORS = 'SCISSORS';
 const PAPER = 'PAPER';
@@ -78,7 +81,20 @@ switch (`${computerChoice}-${userChoice}`) {
     default:
         result = 'SOMETHING WRONG. TRY AGAIN. 🐛'
 }
+if (result=='YOU WIN ☺️🥇 🤖💔'){
+Wins++;
+}
+if(result=='COMPUTER WIN 😔💔 🤖🥇'){
+    Loses++;
+}
+if(result=='TIE 👔'){
+    Ties++;
+}
 output.innerHTML = result;
+
+document.getElementById("Wins").innerHTML =Wins;
+document.getElementById("Loses").innerHTML =Loses;
+document.getElementById("Ties").innerHTML =Ties;
 
 })
   
