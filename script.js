@@ -1,6 +1,7 @@
 function getComputerChoice() {
     return Math.floor((Math.random() * 5) + 1);
 }
+//Function(w tym nawiasie sa zmienne,ktore musisz podac w funkcji do jej wykorzystania w tym {})
 
 var Wins=0;
 var Loses=0;
@@ -17,6 +18,7 @@ const OPTIONS = {
     4: SPOCK,
     5: LIZARD
 };
+//To wszystko wyzej to zmienne. Const to tzw zmienna stała której po zadeklarowaniu nie mozemy w zaden sposob zmienic pozniej w programie.Zmienna let - zmienna lokalna (np dajemy ja w petli for/jakiejs funkcji to bedzie ona dzialala tylko w obrebie tej funkcji). Var to zmienna globalna ktora mozna zmieniac dowolnie i mozna ich uzywac w calym kodzie.
 const OPTIONS2EMOJI = {
     1: '⛰️',
     2: '✂️',
@@ -24,6 +26,7 @@ const OPTIONS2EMOJI = {
     4: '🖖',
     5: '🦎'
 };
+
 let userChoiceID = '';
 
 window.onload = () => {
@@ -80,6 +83,7 @@ switch (`${computerChoice}-${userChoice}`) {
         break;
     default:
         result = 'SOMETHING WRONG. TRY AGAIN. 🐛'
+        //Tutaj w funkcji switch wypisujemy wszystkie przypadki dla danego rozwiazania.Deafult dziala kiedy nic nie wybierzesz albo wprowadzisz bledna wartosc.
 }
 if (result=='YOU WIN ☺️🥇 🤖💔'){
 Wins++;
@@ -90,11 +94,13 @@ if(result=='COMPUTER WIN 😔💔 🤖🥇'){
 if(result=='TIE 👔'){
     Ties++;
 }
+//No to tutaj po prostu funkcja if podlicza ile mamy porazek,zwyciestw i remisow.
 output.innerHTML = result;
 
 document.getElementById("Wins").innerHTML =Wins;
 document.getElementById("Loses").innerHTML =Loses;
 document.getElementById("Ties").innerHTML =Ties;
+//To pobiera wartosc o id podanej w nawiasie z HTML a nastepnie przypisuje ta wartosc do zmiennycy po znaku =.
 
 })
   
