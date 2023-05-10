@@ -1,9 +1,13 @@
 <html>
   <head>
-    <title>GAME</title>
+    <title>GRA</title>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-    <span>YOUR CHOICE</span>
+    <div id="header">Papier,kamień,nożyczki,jaszczurka,spock</div>
+    <br>
+    <span>TWOJ WYBOR</span>
+    <br>
     <div id="user-options">
         <div>
             <input type="radio" id="1" name="option" class="user-option">
@@ -26,17 +30,25 @@
             <label for="5">🦎</label>
         </div>
     </div>
-
-    <span>COMPUTER CHOICE</span>
+<br>
+    <span>WYBOR KOMPUTERA</span>
+    <br>
 <div id="computer-choice">💭</div>
 
-<button id="play">▶️</button>
+<br>
+<button class="button" id="play">▶️</button>
 <br>
 
-Wins : <p id="Wins"></p>
-Loses : <p id="Loses"></p>
-Ties : <p id="Ties"></p>
+<table class="center">
+    <br>
+    <tr>
+<th>WYGRANE : <p id="Wins"></p></th>
+<th>PRZEGRANE : <p id="Loses"></p></th>
+<th>REMISY : <p id="Ties"></p></th>
+</tr>
+</table>
 
+<br>
 <div id="output"></div>
 
 <script type="text/javascript" src="script.js"></script>

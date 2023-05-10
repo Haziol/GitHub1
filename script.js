@@ -55,7 +55,7 @@ switch (`${computerChoice}-${userChoice}`) {
     case `${PAPER}-${PAPER}`:
     case `${SPOCK}-${SPOCK}`:
     case `${LIZARD}-${LIZARD}`:
-        result = 'TIE 👔'
+        result = 'REMIS 👔'
         break;
     case `${ROCK}-${SCISSORS}`:
     case `${ROCK}-${LIZARD}`:
@@ -67,7 +67,7 @@ switch (`${computerChoice}-${userChoice}`) {
     case `${SPOCK}-${SCISSORS}`:
     case `${LIZARD}-${PAPER}`:
     case `${LIZARD}-${SPOCK}`:
-        result = 'COMPUTER WIN 😔💔 🤖🥇'
+        result = 'KOMPUTER WYGRYWA 😔💔 🤖🥇'
         break;
     case `${ROCK}-${PAPER}`:
     case `${ROCK}-${SPOCK}`:
@@ -79,19 +79,19 @@ switch (`${computerChoice}-${userChoice}`) {
     case `${SPOCK}-${LIZARD}`:
     case `${LIZARD}-${ROCK}`:
     case `${LIZARD}-${SCISSORS}`:
-        result = 'YOU WIN ☺️🥇 🤖💔'
+        result = 'BRAWO! WYGRAŁEŚ 🥇'
         break;
     default:
-        result = 'SOMETHING WRONG. TRY AGAIN. 🐛'
+        result = 'COS POSZLO NIE TAK! SPROBUJ PONOWNIE. 🐛'
         //Tutaj w funkcji switch wypisujemy wszystkie przypadki dla danego rozwiazania.Deafult dziala kiedy nic nie wybierzesz albo wprowadzisz bledna wartosc.
 }
-if (result=='YOU WIN ☺️🥇 🤖💔'){
+if (result=='BRAWO! WYGRAŁEŚ 🥇'){
 Wins++;
 }
-if(result=='COMPUTER WIN 😔💔 🤖🥇'){
+if(result=='KOMPUTER WYGRYWA 😔💔 🤖🥇'){
     Loses++;
 }
-if(result=='TIE 👔'){
+if(result=='REMIS 👔'){
     Ties++;
 }
 //No to tutaj po prostu funkcja if podlicza ile mamy porazek,zwyciestw i remisow.
