@@ -84,6 +84,7 @@ switch (`${computerChoice}-${userChoice}`) {
     default:
         result = 'COS POSZLO NIE TAK! SPROBUJ PONOWNIE. 🐛'
         //Tutaj w funkcji switch wypisujemy wszystkie przypadki dla danego rozwiazania.Deafult dziala kiedy nic nie wybierzesz albo wprowadzisz bledna wartosc.
+
 }
 if (result=='BRAWO! WYGRAŁEŚ 🥇'){
 Wins++;
@@ -102,5 +103,20 @@ document.getElementById("Loses").innerHTML =Loses;
 document.getElementById("Ties").innerHTML =Ties;
 //To pobiera wartosc o id podanej w nawiasie z HTML a nastepnie przypisuje ta wartosc do zmiennycy po znaku =.
 
+
 })
-  
+
+function res(){
+    userChoice =0;
+    computerChoice=0;
+    Wins=0;
+    Loses=0;
+    Ties=0;
+    wyswietl();
+}
+
+function wyswietl(){
+    document.getElementById("Wins").innerHTML =Wins;
+    document.getElementById("Loses").innerHTML =Loses;
+    document.getElementById("Ties").innerHTML =Ties;
+}  
